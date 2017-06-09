@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    19:57:42 06/08/2017 
+// Create Date:    14:13:39 06/09/2017 
 // Design Name: 
-// Module Name:    AlineadorDosBits 
+// Module Name:    Sumador 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,14 +18,23 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module AlineadorDosBits(
-	input wire [31:0] EntraceData,
-	output reg [31:0] OutputData
+module Sumador(
+	input [31:0] SumandoA,
+	input [31:0] SumandoB,
+	input Acarreo,
+	output reg [31:0] Resultado,
+	output reg SignoMasSignificativo
     );
 
+
+	reg [32:0] res;
 	
-	always @( EntraceData ) begin
-		OutputData = EntraceData<<2;
-	end
+	always @(SumandoA,SumandoB,Acarreo)
+		res = SumandoA + SumandoB + Acarreo;
 	
+	assign SignoMasSignificativo=res[32];
+	assign Resultado = res[31:0];
+
+
+
 endmodule

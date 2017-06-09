@@ -19,16 +19,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ZeroExtender(
-	extend,clk,extended
+	input[15:0] extend,
+	output[31:0] extended
 );
 
-input[15:0] extend;
-input clk;
-output[31:0] extended;
 
-always @( posedge clk ) begin
+
+always @( extend ) begin
     extended[31:0] <= {16'h0000, extend[15:0]};
-	 
 end
 
 endmodule

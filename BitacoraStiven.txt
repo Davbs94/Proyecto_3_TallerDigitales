@@ -4,3 +4,4 @@
 09/06/2017    Extension de Cero
 09/06/2017    Registros Intermedios
 09/06/2017    Reparacion del Alineador
+09/06/2017    Sumador
