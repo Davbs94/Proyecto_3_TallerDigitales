@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    19:57:42 06/08/2017 
+// Create Date:    09:09:35 06/09/2017 
 // Design Name: 
-// Module Name:    AlineadorDosBits 
+// Module Name:    MemoriaReg 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,15 +18,17 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module AlineadorDosBits(
-	input wire [31:0] EntraceData,
-	output reg [31:0] OutputData,
-	input clk
-    );
+module MemoriaReg(
+	input wire [31:0] DataIn,          // Memory Address
+	input reg [31:0] DataOut,
+	input wire clk
+);
 
-	
-	always @( posedge clk ) begin
-		OutputData = EntraceData<<2;
-	end
-	
+reg [31:0] MEMO;
+
+// Using @(addr) will lead to unexpected behavior as memories are synchronous elements like registers
+always @(posedge clk) begin
+	 DataOut <= MEMO;
+	 MEMO <= DataIn;
+end
 endmodule

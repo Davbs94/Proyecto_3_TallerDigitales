@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    19:57:42 06/08/2017 
+// Create Date:    17:09:26 06/08/2017 
 // Design Name: 
-// Module Name:    AlineadorDosBits 
+// Module Name:    ZeroExtender 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,15 +18,17 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module AlineadorDosBits(
-	input wire [31:0] EntraceData,
-	output reg [31:0] OutputData,
-	input clk
-    );
+module ZeroExtender(
+	extend,clk,extended
+);
 
-	
-	always @( posedge clk ) begin
-		OutputData = EntraceData<<2;
-	end
-	
+input[15:0] extend;
+input clk;
+output[31:0] extended;
+
+always @( posedge clk ) begin
+    extended[31:0] <= {16'h0000, extend[15:0]};
+	 
+end
+
 endmodule
