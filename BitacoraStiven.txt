@@ -1,2 +1,3 @@
-05/06/2017    Creación del Memoria de la etapa DECO
+﻿05/06/2017    Creación del Memoria de la etapa DECO
 06/06/2017    Creación del extensor de signo
+08/06/2017    Alineador de dos Bits
