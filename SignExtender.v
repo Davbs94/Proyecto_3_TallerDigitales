@@ -19,15 +19,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module SignExtender(
-	extend,clk,extended
+	input[15:0] extend,
+	output[31:0] extended
 );
 
-input[15:0] extend;
-input clk;
-output[31:0] extended;
-
-
-always @( posedge clk ) begin
+always @(extend) begin
     extended[31:0] <= { {16{extend[15]}}, extend[15:0] };
 end
 
