@@ -34,7 +34,6 @@ reg [31:0] MEMO[0:31];  // 256 words of 32-bit memory
 integer i;
 
 initial begin
-  read_data <= 0;
   for (i = 0; i < 32; i = i + 1) begin
     MEMO[i] = i;
   end

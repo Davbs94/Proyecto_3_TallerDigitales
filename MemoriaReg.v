@@ -20,11 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 module MemoriaReg(
 	input wire [31:0] DataIn,          // Memory Address
-	input reg [31:0] DataOut,
+	output reg [31:0] DataOut,
 	input wire clk
 );
 
 reg [31:0] MEMO;
+
+initial begin
+MEMO=0;
+end
 
 // Using @(addr) will lead to unexpected behavior as memories are synchronous elements like registers
 always @(posedge clk) begin
