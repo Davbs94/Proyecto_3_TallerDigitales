@@ -28,11 +28,17 @@ wire [3:0] ALUop,shamt;
 always @(ALUop or a or b)
 begin
 	case ( ALUop ) 
-		4'b0001: r=a+b; // select data on port B 
-		4'b0010: r=a-b ; // increment data on port B 
-		4'b0011: r=a&b; // AND 
-		4'b0100: r=a|b; // OR 
-		4'b0101: r=a^b; // EXOR 
+		4'b0001: r=a+b; // add
+		4'b0010: r=a-b; // sub
+		4'b0011: r=a*b; // mult
+		4'b0100: r=a/b; // div
+		4'b0101: r=a&b; // and 
+		4'b0110: r=a|b; // or 
+		4'b0111: r=~(a|b); // nor 
+		4'b1000: r=a^b; // xor 
+		4'b1001: r=~b; // not 
+		4'b1010: r=~(a&b); // nand
+		4'b1011: r=b; // jr 
 
    endcase
 end
