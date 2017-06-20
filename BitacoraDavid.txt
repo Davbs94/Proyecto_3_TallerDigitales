@@ -1,1 +1,15 @@
+David Badilla Sanchez 2013389091
 
+Tareas que se realizó:
+-Creacion de componetes de procesador: Banco de registros, control, alu, registros de salida....
+-Conexión y sincronización del procesador
+-Pruebas del procesador
+
+
+1/6/2017 Se empieza con los componentes del procesadro, ALU.
+2/6/2017 Se realizan los mux para el procesador
+11/6/2017 Se trabaja con las memorias brindadas por stiven
+12/6/2017 Se alistan todos los demas componetes del procesador
+16/6/2017 Se empieza conexion del procesador
+17/6/2017 se continua con la conexion del procesador
+19/06/2017 Se intenta la conexion del procesador con la calculadora
