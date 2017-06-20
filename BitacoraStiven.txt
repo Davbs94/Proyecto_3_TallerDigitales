@@ -1,7 +1,16 @@
-﻿05/06/2017    Creación del Memoria de la etapa DECO
+﻿Stiven Sánchez Rodríguez   201063961
+
+Tareas:
+ -  Diseño de cada uno de los componentes del procesador
+ -  Implementación del la calculadora mediante el uso del teclado de la FPGA
+
+05/06/2017    Creación del Memoria de la etapa DECO
 06/06/2017    Creación del extensor de signo
 08/06/2017    Alineador de dos Bits
 09/06/2017    Extension de Cero
 09/06/2017    Registros Intermedios
 09/06/2017    Reparacion del Alineador
 09/06/2017    Sumador
+18/06/2017    Investigación de teclado
+19/06/2017    Desarrollo del teclado
+20/06/2017    Repareción de teclado
